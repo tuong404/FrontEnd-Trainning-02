@@ -24,17 +24,26 @@
                 </div>
             </div>
 
-            <div class="header__menu">
+            <label for="nav__mobile-input" class="header__menu">
                 <i class="fas fa-bars"></i>
-            </div>
+            </label>
+            <input type="checkbox" hidden id="nav__mobile-input" class="nav__input" >
+            <label for="nav__mobile-input" class="overlay"></label>
             <!------------------- NAVBAR ----------------->
+            <nav class="header__navbar-mobile">
+                <ul class="header__navbar-mobile">
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-link" href="#"> TRANG CHỦ </a> </li>
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-link" href="#"> GIỚI THIỆU </a> </li>
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-link" href="#"> THÀNH TỰU </a> </li>
+                </ul>
+            </nav>
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> TRANG CHỦ </a> </li>
-                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> GIỚI THIỆU </a> </li>
-                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> THÀNH TỰU </a> </li>
-                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> CÁC KHOA HỌC </a></li>
-                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> TIN TỨC & SỰ KIỆN</a>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link hide-on-mb" href="#"> TRANG CHỦ </a> </li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link hide-on-mb" href="#introdue"> GIỚI THIỆU </a> </li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link hide-on-mb" href="#"> THÀNH TỰU </a> </li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#course"> CÁC KHÓA HỌC </a></li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link" href="#news"> TIN TỨC & SỰ KIỆN</a>
                     </li>
                     <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> CHẤT LƯỢNG GIẢNG
                             DẠY</a></li>
@@ -44,15 +53,31 @@
                     </li>
                     <li class="header__navbar-item"><a class="header__navbar-item-link" href="#"> LIÊN HỆ </a></li>
                 </ul>
+                <label class="header__navbar-icon " for="nav__mobile-input">
+                    <i class="fas fa-times header__navbar-iconx"></i>
+                </label>
+                
             </nav>
         </header>
         <!------------------ CONTENT ----------------->
         <div class="content">
-            <div class="content__slider">
-                <img class="content__slider-image" src="./images/slider_1.png" alt="slider">
-            </div>
+           <div class="slides">
+                <div class="content__slider">
+                    <input type="radio" name="checked" id="r1" class="input" hidden >
+                    <input type="radio" name="checked" id="r2" class="input" hidden >
+                    <img class="content__slider-image s1" src="./images/slider_1.png" alt="slider">
+                    <img class="content__slider-image " src="./images/slider_2.png" alt="slider">
+
+                    <div class="navigation">
+                        <label for="r1" class="bar"></label>
+                        <label for="r2" class="bar"></label>
+                    </div>
+                
+                </div>
+           </div>
+            
             <!------------------ INTRODUE ----------------->
-            <div class="content__introdue">
+            <div class="content__introdue" id="introdue"> 
                 <h1>
                     GIỚI THIỆU
                 </h1>
@@ -71,7 +96,7 @@
                 chiến lược là Đại Học CUNY Hoa Kỳ (The City University of New York) - Đại học công lập lớn thứ 3 Hoa Kỳ
                 với 550.000 sinh viên đang theo học.
             </p>
-            <div class="content__title content__title--first">
+            <div class="content__title content__title--first" id="course">
                 <h2>CÁC CHƯƠNG TRÌNH ANH NGỮ TẠI VUS</h2>
             </div>
             <img class="content__line-image" src="./images/line.png" alt="line">
@@ -121,7 +146,7 @@
 
             </div>
             <!------------------ NEWS & ENVENT ----------------->
-            <div class="content__title content__title--second">
+            <div class="content__title content__title--second" id="news">
                 <h2> TIN TỨC & SỰ KIỆN</h2>
             </div>
 
@@ -129,7 +154,7 @@
 
             <div class="content__list-img">
 
-                <div class="content__image-item">
+                <div class="content__image-item  content__image-item--first">
                     <a href="#" class="content__image-main">
                         <img class="content__img" src="./images/tin_tuc_1.png" alt="tintuc">
                         <p class="content__text">CÙNG VUS VUI HỘI TRĂNG RẰM TẠI "THÀNH PHỐ TUỔI THƠ"</p>
@@ -137,7 +162,7 @@
                 </div>
 
 
-                <div class="content__image-item content__image-wrap">
+                <div class="content__image-item ">
                     <a href="#" class="content__image-child">
                         <img src="./images/tin_tuc_2.png" alt="tintuc">
                         <p class="content__text1">2.947 HỌC VIÊN VUS NHẬN CHỨNG CHỈ QUỐC TẾ CAMBRIDGE</p>
@@ -150,7 +175,7 @@
 
                     </a>
                 </div>
-                <div class="content__image-item content__image-wrap content__image-wrapper">
+                <div class="content__image-item ">
                     <a href="#" class="content__image-child">
                         <img src="./images/tin_tuc_1.png" alt="tintuc">
                         <P class="content__text1">GALA TRAO GIẢI VUS SUMMER CON - TEST 2016 BEA STAR </P>
